@@ -1,0 +1,195 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Left Side (Header, Main, Footer) */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    transition: flex 0.5s ease;
+}
+
+/* Main Section - Center the content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+/* Right Side (Image) */
+.right-side {
+    flex: 1;
+    transition: flex 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.right-side img {
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border-radius: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.header-right p {
+    margin-bottom: 10px;
+}
+
+.header-right button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-right button:hover {
+    background-color: #45a049;
+}
+
+/* Main Content Styles */
+#main-content p {
+    color: #999;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+/* Authentication Form Styles */
+.auth-form {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Checkbox container */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 2px;
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.auth-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.auth-form button:hover {
+    background-color: #45a049;
+}
+
+/* Forgotten Links */
+.forgot-links {
+    display: flex;
+    gap: 10px;
+}
+
+.forgot-links p {
+    margin-top: 10px;
+    color: #45a049;
+}
+
+.forgot-links a {
+    color: #45a049;
+    text-decoration: none;
+}
+
+.forgot-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    padding: 10px;
+}
+
+/* Fullscreen Animation Styles */
+.fullscreen-active .left-side {
+    flex: 0; /* Hide the left side */
+    width: 0;
+    height: 0;
+}
+
+.fullscreen-active .right-side {
+    flex: 1 1 100%;
+}
+
+.fullscreen-active img {
+    transform: scale(1.1);
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}

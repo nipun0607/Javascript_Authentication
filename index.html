@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Two Column Layout with Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side (Header, Main, Footer) -->
+        <div class="left-side" id="left-side">
+            <header>
+                <div class="header-left">
+                    <h1>REGIONS Mortgage</h1>
+                </div>
+                <div class="header-right">
+                    <p>Are you a new customer?</p>
+                    <button id="enroll-btn">Enroll Now</button>
+                </div>
+            </header>
+
+            <main id="main-content">
+                <h2>Welcome Back</h2>
+                <p>Sign into your Regions MyMortgage account.</p>
+
+                <!-- Sign-In Form -->
+                <div class="auth-form">
+                    <form id="login-form">
+                        <label for="online-id">Online ID:</label>
+                        <input type="text" id="online-id" name="online-id" required><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required><br>
+
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="remember-me" name="remember-me">
+                            <label for="remember-me">Remember Me</label>
+                        </div>
+
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <div class="forgot-links">
+                        <p><a href="#">Forgotten Online ID</a></p>
+                        <p><a href="#">Forgotten Password</a></p>
+                    </div>
+
+                    <p id="error-message" style="color: red; display: none;">Please fill out all fields.</p>
+                </div>
+            </main>
+
+            <footer>
+                <p>© 2024 Your Website. All Rights Reserved.</p>
+            </footer>
+        </div>
+
+        <!-- Right Side (Image) -->
+        <div class="right-side" id="right-side">
+            <img src="https://propertyingurugram.in/wp-content/uploads/2023/12/Luxury-Real-Estate-The-preferred-choice-for-discerning-homebuyers-and-astute-investors.jpg" alt="Right Side Image" id="fullscreen-image"/>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+   
+    
+</body>
+</html>

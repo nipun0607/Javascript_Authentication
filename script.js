@@ -15,8 +15,10 @@ loginForm.addEventListener('submit', function(e) {
     } else {
         errorMessage.style.display = 'none';
 
-        // Start the animation to expand the image and hide the left side
-        container.classList.add('fullscreen-active');
+        // Add animation to fade out the left side and enlarge the right side image
+        setTimeout(function() {
+            container.classList.add('fullscreen-active'); // Add class to trigger CSS animations
+        }, 300); // Small delay before animation
 
         // Hide the fullscreen image after 5 seconds
         setTimeout(function() {
